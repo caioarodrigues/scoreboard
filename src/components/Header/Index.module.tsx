@@ -1,3 +1,5 @@
+import "./style.css";
+
 type headerProps = { 
   children?: React.ReactNode;
 }
@@ -12,12 +14,10 @@ const h1Style: React.CSSProperties = {
 
 export default function Header ({ children }: headerProps) {
   return (
-    <header style={headerStyle}>
+    <header className="header" style={headerStyle}>
       <h1 style={h1Style}>Scores Manager</h1>
 
-      <section>
-        {children}
-      </section>
+      {children && <section className="header-children">{children}</section>}
     </header>
   )
 }

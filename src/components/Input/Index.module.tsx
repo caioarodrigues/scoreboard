@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import "./style.css";
 
 type inputProps = {
   type: string;
@@ -8,7 +9,7 @@ type inputProps = {
 
 const Input = forwardRef<HTMLInputElement, inputProps>(({ type, style, placeholder }, ref) => {
   return (
-    <input type={type} style={style} ref={ref} placeholder={placeholder}/>
+    <input type={type} style={style} ref={ref} placeholder={placeholder} className='input'/>
   )
 })
 

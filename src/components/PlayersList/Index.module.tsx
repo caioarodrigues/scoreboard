@@ -10,8 +10,6 @@ export default function PlayersList () {
     flexWrap: "wrap",
     listStyle: "none",
     padding: "0",
-    backgroundColor: "#ffed68",
-
   };
   const liStyle: React.CSSProperties = {
     margin: '.25em'
