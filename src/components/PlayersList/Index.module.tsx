@@ -5,13 +5,14 @@ import ScoreChanger from "../ScoreChanger/Index.module";
 
 export default function PlayersList () {
   const { players } = useContext(PlayersContext);
+  
   return (
     <ul>
       {players.map(({ name, score }, index) => {
         return (
           <li key={index}>
             <Card playerName={name} score={score}>
-              <ScoreChanger />
+              <ScoreChanger playerName={name}/>
             </Card>
           </li>
         )

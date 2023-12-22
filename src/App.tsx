@@ -34,6 +34,11 @@ function App() {
               return alert('Please, enter a name');
           
             if(newPlayerName) {
+              const playerExists = players.find(player => player.name === newPlayerName);
+              
+              if (playerExists)
+                return alert('This player already exists');
+
               setPlayers(state => [...state, { id: state.length + 1, name: newPlayerName, score: 0  }]);
               inputRef.current.value = '';
               inputRef.current.focus();
