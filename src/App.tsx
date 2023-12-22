@@ -34,7 +34,11 @@ function App() {
             if (inputRef.current?.value === '') 
               return alert('Please, enter a name');
           
-            newPlayerName && setPlayers(state => [...state, { id: state.length + 1, name: newPlayerName, score: 0  }]);
+            if(newPlayerName) {
+              setPlayers(state => [...state, { id: state.length + 1, name: newPlayerName, score: 0  }]);
+              inputRef.current.value = '';
+              inputRef.current.focus();
+            }
           }}
           style={{}}>
             add
