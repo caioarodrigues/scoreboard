@@ -1,13 +1,12 @@
 import './App.css'
 import Button from './components/Button/Index.module'
-import Card from './components/Card/Index.module'
 import Header from './components/Header/Index.module'
 import Input from './components/Input/Index.module'
-import ScoreChanger from './components/ScoreChanger/Index.module'
 import Stats from './components/Stats/Index.module'
 import PlayersContext from './context/PlayersContext'
 import { useRef, useState } from 'react'
 import { Player } from './types/Player'
+import PlayersList from './components/PlayersList/Index.module'
 
 function App() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -45,9 +44,7 @@ function App() {
           </Button>
         </Header>
         <Stats />
-        <Card playerName='teste' score={2}>
-          <ScoreChanger />
-        </Card>
+        <PlayersList />
       </PlayersContext.Provider>
     </>
   )
