@@ -6,7 +6,7 @@ type buttonProps = {
 
 export default function Button ({ style, children, onClick }: buttonProps) {
   return (
-    <button style={style} onClick={onClick}>
+    <button style={style} onClick={onClick} className="button">
       {children}
     </button>
   )
