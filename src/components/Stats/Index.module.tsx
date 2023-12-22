@@ -9,13 +9,13 @@ export default function Stats () {
   return (
     <section className="stats" >
       <h2>Top scores</h2>
-      <ul className="sorted-players" style={{ backgroundColor: 'red' }} >
+      <ol className="sorted-players" style={{ backgroundColor: 'red' }} >
         {sortedPlayers.map(({ name, score }, index) => {
           return (
             <Stat key={index} name={name} score={score} />
           )
         })}
-      </ul>
+      </ol>
     </section>
   )
 }
